@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+	<bean class="com.app.User" name="usrObj">
+		<property name="uid" value="8"/>
+		<property name="un" value="SAT"/>
+		<property name="pwd" value="TECH"/>
+	</bean>
+	
+	
+	<bean class="com.app.Account" 
+	   name="accObj"
+	   p:uob-ref="usrObj"
+	   p:aid="5"
+	   p:acode="US"/>
+		
+		  
+		    
+	
+
+
+
+
+
+
+
+
+
+
+</beans>

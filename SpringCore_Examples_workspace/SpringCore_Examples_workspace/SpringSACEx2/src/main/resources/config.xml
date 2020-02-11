@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<util:list list-class="java.util.ArrayList"  id="lst">
+		<value>M1</value>
+		<value>M2</value>
+		<value>M3</value>
+	</util:list>
+
+	<util:map map-class="java.util.LinkedHashMap" id="mapob">
+		<entry key="GA" value="12"/>
+		<entry key="FI" value="36"/>
+	</util:map>
+
+	<util:properties id="propsob">
+		<prop key="TEST">A</prop>
+		<prop key="EXEC">B</prop>
+	</util:properties>
+
+
+	<bean class="com.app.Product" name="pobj">
+		<property name="pid" value="5"/>
+		<property name="pmodes">
+			<ref bean="lst"/>
+		</property>
+		
+		<property name="versions">
+			<ref bean="mapob"/>
+		</property>
+		
+		<property name="grades" ref="propsob"/>
+		
+	</bean>
+	
+	
+	
+
+
+
+
+
+</beans>

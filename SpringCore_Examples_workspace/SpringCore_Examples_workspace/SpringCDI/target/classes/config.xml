@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<bean class="com.app.Address" name="aobj">
+		<constructor-arg>
+			<value>88</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>HYD</value>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="X-AXIS" value="10254E+859"/>
+				<entry key="Y-AXIS" value="9999E+869"/>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="com.app.Employee" name="eobj">
+		<constructor-arg>
+			<value>99</value>
+		</constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>P1</value>
+				<value>P2</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg ref="aobj"/>
+	</bean>
+	
+	
+	
+	
+	
+	
+
+
+</beans>

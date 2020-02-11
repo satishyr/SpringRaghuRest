@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<util:list  list-class="java.util.LinkedList" id="lstobj">
+		<value>A</value>
+		<value>A</value>
+		<value>A</value>
+	</util:list>
+	
+	<util:set set-class="java.util.TreeSet" id="sobj">
+		<value>B</value>
+		<value>A</value>
+		<value>M</value>
+	</util:set>
+	
+	<util:map map-class="java.util.TreeMap" id="mobj">
+		<entry key="AA" value="P1"/>
+		<entry key="MM" value="P2"/>
+		<entry key="BB" value="P3"/>
+	</util:map>
+
+
+	<util:properties id="pobj">
+		<prop key="a1">b1</prop>
+		<prop key="a2">b2</prop>
+	</util:properties>
+	
+	
+
+
+
+
+</beans>
